@@ -29,7 +29,6 @@ RUN export CONSUL_TEMPLATE_VERSION=0.16.0 \
 
 RUN adduser --disabled-password --gecos '' docker_user \
  && mkdir /src \
- && chown -R docker_user /src
+ && chown docker_user:docker_user /src
 
 WORKDIR /src
-USER docker_user
