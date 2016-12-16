@@ -3,7 +3,7 @@ FROM node:6.9.2-slim
 # to install yarn from apt, we need to configure the repository for yarn
 RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-transport-https \
-    gcc \
+    g++ \
     git \
     make \
     python \
