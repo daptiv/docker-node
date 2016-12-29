@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
  && apt-get update && apt-get install -y --no-install-recommends \
     yarn \
- && apt-get remove -y apt-transport-https \
  && rm -rf /var/lib/apt/lists/*
 
 RUN export CONSUL_TEMPLATE_VERSION=0.16.0 \
