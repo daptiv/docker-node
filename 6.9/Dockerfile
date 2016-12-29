@@ -3,13 +3,13 @@ FROM node:6.9.2-slim
 # to install yarn from apt, we need to configure the repository for yarn
 RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-transport-https \
+    bzip2 \
     g++ \
     git \
     make \
     python \
     supervisor \
     unzip \
-    bzip2 \
  && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
  && apt-get update && apt-get install -y --no-install-recommends \
